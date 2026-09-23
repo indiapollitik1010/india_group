@@ -1,0 +1,7 @@
+Generate the India graph the student picked from the saved
+recommendation state (by option number, display name, or natural
+description) using `python python/generate_visualization.py`, against
+the resolved APPROVED dataset for India
+(`python/resolve_assignment_dataset.py --country India --purpose
+approved`). Never guess an ambiguous reply; ask again with the same
+numbered list instead.
