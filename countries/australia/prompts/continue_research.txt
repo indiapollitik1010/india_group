@@ -1,0 +1,5 @@
+Continue the next Australia source batch: resume research at the
+next unresolved batch instead of restarting from scratch. Run the same
+dependency check and preflight steps as
+countries/australia/prompts/run_assignment.txt first; stop if
+SAFE_TO_RESEARCH is false.
