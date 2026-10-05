@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="780" viewBox="0 0 1200 780" role="img" aria-labelledby="title description">
+<title id="title">Narendra Modi first-term approval observations</title>
+<desc id="description">Four verified India Today Group Karvy Insights Mood of the Nation prime-minister approval observations between 2016 and 2019. The horizontal axis shows approval percentage and the vertical axis shows months in office from Narendra Modi’s 26 May 2014 start date.</desc>
+<rect width="1200" height="780" fill="#FBFBF2"/>
+<rect x="190" y="165" width="900" height="470" fill="#FBFBF2" stroke="#515151" stroke-width="1"/>
+<text x="190" y="68" fill="#515151" font-family="Source Sans Pro, Arial, sans-serif" font-size="30" font-weight="600">Narendra Modi — first-term approval observations</text>
+<text x="190" y="103" fill="#515151" font-family="Source Sans Pro, Arial, sans-serif" font-size="18">26 May 2014–30 May 2019 · ITG–Karvy Insights Mood of the Nation</text>
+<text x="190" y="130" fill="#515151" font-family="Source Sans Pro, Arial, sans-serif" font-size="15">Four verified observations; points are not connected or interpolated.</text>
+<line x1="190" y1="635.0" x2="1090" y2="635.0" stroke="#D8D8D0" stroke-width="1"/>
+<text x="172" y="641.0" text-anchor="end" fill="#515151" font-family="Source Sans Pro, Arial, sans-serif" font-size="16">0</text>
+<line x1="190" y1="556.7" x2="1090" y2="556.7" stroke="#D8D8D0" stroke-width="1"/>
+<text x="172" y="562.7" text-anchor="end" fill="#515151" font-family="Source Sans Pro, Arial, sans-serif" font-size="16">10</text>
+<line x1="190" y1="478.3" x2="1090" y2="478.3" stroke="#D8D8D0" stroke-width="1"/>
+<text x="172" y="484.3" text-anchor="end" fill="#515151" font-family="Source Sans Pro, Arial, sans-serif" font-size="16">20</text>
+<line x1="190" y1="400.0" x2="1090" y2="400.0" stroke="#D8D8D0" stroke-width="1"/>
+<text x="172" y="406.0" text-anchor="end" fill="#515151" font-family="Source Sans Pro, Arial, sans-serif" font-size="16">30</text>
+<line x1="190" y1="321.7" x2="1090" y2="321.7" stroke="#D8D8D0" stroke-width="1"/>
+<text x="172" y="327.7" text-anchor="end" fill="#515151" font-family="Source Sans Pro, Arial, sans-serif" font-size="16">40</text>
+<line x1="190" y1="243.3" x2="1090" y2="243.3" stroke="#D8D8D0" stroke-width="1"/>
+<text x="172" y="249.3" text-anchor="end" fill="#515151" font-family="Source Sans Pro, Arial, sans-serif" font-size="16">50</text>
+<line x1="190" y1="165.0" x2="1090" y2="165.0" stroke="#D8D8D0" stroke-width="1"/>
+<text x="172" y="171.0" text-anchor="end" fill="#515151" font-family="Source Sans Pro, Arial, sans-serif" font-size="16">60</text>
+<line x1="190.0" y1="165" x2="190.0" y2="635" stroke="#D8D8D0" stroke-width="1"/>
+<text x="190.0" y="666" text-anchor="middle" fill="#515151" font-family="Source Sans Pro, Arial, sans-serif" font-size="16">45%</text>
+<line x1="415.0" y1="165" x2="415.0" y2="635" stroke="#D8D8D0" stroke-width="1"/>
+<text x="415.0" y="666" text-anchor="middle" fill="#515151" font-family="Source Sans Pro, Arial, sans-serif" font-size="16">50%</text>
+<line x1="640.0" y1="165" x2="640.0" y2="635" stroke="#D8D8D0" stroke-width="1"/>
+<text x="640.0" y="666" text-anchor="middle" fill="#515151" font-family="Source Sans Pro, Arial, sans-serif" font-size="16">55%</text>
+<line x1="865.0" y1="165" x2="865.0" y2="635" stroke="#D8D8D0" stroke-width="1"/>
+<text x="865.0" y="666" text-anchor="middle" fill="#515151" font-family="Source Sans Pro, Arial, sans-serif" font-size="16">60%</text>
+<line x1="1090.0" y1="165" x2="1090.0" y2="635" stroke="#D8D8D0" stroke-width="1"/>
+<text x="1090.0" y="666" text-anchor="middle" fill="#515151" font-family="Source Sans Pro, Arial, sans-serif" font-size="16">65%</text>
+<text x="640.0" y="713" text-anchor="middle" fill="#515151" font-family="Source Sans Pro, Arial, sans-serif" font-size="19">Approval (%)</text>
+<text transform="translate(48 400.0) rotate(-90)" text-anchor="middle" fill="#515151" font-family="Source Sans Pro, Arial, sans-serif" font-size="19">Months in office</text>
+<circle cx="550.0" cy="430.9" r="9" fill="#00A6ED" stroke="#515151" stroke-width="1.5"/>
+<text x="566.0" y="436.9" fill="#515151" font-family="Source Sans Pro, Arial, sans-serif" font-size="16">Jul 2016 · 53%</text>
+<circle cx="910.0" cy="292.7" r="9" fill="#00A6ED" stroke="#515151" stroke-width="1.5"/>
+<text x="926.0" y="298.7" fill="#515151" font-family="Source Sans Pro, Arial, sans-serif" font-size="16">Jan 2018 · 61%</text>
+<circle cx="640.0" cy="246.1" r="9" fill="#00A6ED" stroke="#515151" stroke-width="1.5"/>
+<text x="656.0" y="252.1" fill="#515151" font-family="Source Sans Pro, Arial, sans-serif" font-size="16">Jul 2018 · 55%</text>
+<circle cx="595.0" cy="200.6" r="9" fill="#00A6ED" stroke="#515151" stroke-width="1.5"/>
+<text x="611.0" y="206.6" fill="#515151" font-family="Source Sans Pro, Arial, sans-serif" font-size="16">Jan 2019 · 54%</text>
+<line x1="190" y1="682" x2="1090" y2="682" stroke="#515151" stroke-width="1"/>
+<text x="190" y="714" fill="#515151" font-family="Source Sans Pro, Arial, sans-serif" font-size="14">Source: Pollitik India reference snapshot; India Today Group–Karvy Insights Mood of the Nation PM series.</text>
+<text x="190" y="739" fill="#515151" font-family="Source Sans Pro, Arial, sans-serif" font-size="14">Tenure start: Zárate’s Political Collections. Approval is the recorded Positive value.</text>
+</svg>
