@@ -63,6 +63,10 @@
 angusreid.org
 ipsos.com
 leger360.com
+morningconsult.com
+indiatoday.in
+gallup.com
+pewresearch.org
 #
 # --------------------------------------------------------------------
 # The following 4 domains were explicitly approved by the user on
