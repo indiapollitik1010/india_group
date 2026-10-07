@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title description">
+<title id="title">Fictional demonstration: synthetic approval series</title>
+<desc id="description">A fictional, computer-generated 100-point line chart. It is not polling data and must not be used as evidence about Narendra Modi or India.</desc>
+<rect width="1200" height="720" fill="#FBFBF2"/>
+<rect x="135" y="28" width="955" height="52" fill="#F6511D"/>
+<text x="612" y="62" text-anchor="middle" fill="#FBFBF2" font-family="Arial, sans-serif" font-size="21" font-weight="700" letter-spacing="1">FICTIONAL DEMONSTRATION — NOT REAL POLLING DATA</text>
+<text x="135" y="126" fill="#FFB400" font-family="Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="2">POLLITIK · DEMO ONLY</text>
+<text x="135" y="174" fill="#242424" font-family="Georgia, Times New Roman, serif" font-size="36" font-weight="700">Synthetic 100-point approval example</text>
+<text x="135" y="205" fill="#515151" font-family="Arial, sans-serif" font-size="17">Fictional values across a second-term timeline · May 2019–June 2024</text>
+<line x1="135" y1="570.0" x2="1090" y2="570.0" stroke="#DEDCCF" stroke-width="1"/>
+<text x="120" y="575.0" text-anchor="end" fill="#515151" font-family="Arial, sans-serif" font-size="14">40%</text>
+<line x1="135" y1="502.0" x2="1090" y2="502.0" stroke="#DEDCCF" stroke-width="1"/>
+<text x="120" y="507.0" text-anchor="end" fill="#515151" font-family="Arial, sans-serif" font-size="14">50%</text>
+<line x1="135" y1="434.0" x2="1090" y2="434.0" stroke="#DEDCCF" stroke-width="1"/>
+<text x="120" y="439.0" text-anchor="end" fill="#515151" font-family="Arial, sans-serif" font-size="14">60%</text>
+<line x1="135" y1="366.0" x2="1090" y2="366.0" stroke="#DEDCCF" stroke-width="1"/>
+<text x="120" y="371.0" text-anchor="end" fill="#515151" font-family="Arial, sans-serif" font-size="14">70%</text>
+<line x1="135" y1="298.0" x2="1090" y2="298.0" stroke="#DEDCCF" stroke-width="1"/>
+<text x="120" y="303.0" text-anchor="end" fill="#515151" font-family="Arial, sans-serif" font-size="14">80%</text>
+<line x1="135" y1="230.0" x2="1090" y2="230.0" stroke="#DEDCCF" stroke-width="1"/>
+<text x="120" y="235.0" text-anchor="end" fill="#515151" font-family="Arial, sans-serif" font-size="14">90%</text>
+<line x1="247.3" y1="570" x2="247.3" y2="577" stroke="#515151" stroke-width="1"/>
+<text x="247.3" y="599" text-anchor="middle" fill="#515151" font-family="Arial, sans-serif" font-size="14">2020</text>
+<line x1="437.6" y1="570" x2="437.6" y2="577" stroke="#515151" stroke-width="1"/>
+<text x="437.6" y="599" text-anchor="middle" fill="#515151" font-family="Arial, sans-serif" font-size="14">2021</text>
+<line x1="627.3" y1="570" x2="627.3" y2="577" stroke="#515151" stroke-width="1"/>
+<text x="627.3" y="599" text-anchor="middle" fill="#515151" font-family="Arial, sans-serif" font-size="14">2022</text>
+<line x1="817.1" y1="570" x2="817.1" y2="577" stroke="#515151" stroke-width="1"/>
+<text x="817.1" y="599" text-anchor="middle" fill="#515151" font-family="Arial, sans-serif" font-size="14">2023</text>
+<line x1="1006.8" y1="570" x2="1006.8" y2="577" stroke="#515151" stroke-width="1"/>
+<text x="1006.8" y="599" text-anchor="middle" fill="#515151" font-family="Arial, sans-serif" font-size="14">2024</text>
+<text transform="translate(34 400.0) rotate(-90)" text-anchor="middle" fill="#515151" font-family="Arial, sans-serif" font-size="14">Fictional value (%)</text>
+<path d="M 135.0 388.8 L 144.9 362.3 L 154.2 381.8 L 164.1 357.7 L 173.5 348.8 L 183.3 348.2 L 192.7 359.0 L 202.6 328.5 L 211.9 349.6 L 221.8 331.6 L 231.7 322.1 L 241.1 317.5 L 250.9 327.7 L 260.3 309.2 L 270.2 321.3 L 279.5 312.1 L 289.4 340.2 L 298.8 312.1 L 308.6 342.6 L 318.5 347.4 L 327.9 330.8 L 337.7 324.7 L 347.1 341.9 L 357.0 336.4 L 366.3 371.3 L 376.2 364.7 L 385.6 355.9 L 395.5 363.5 L 405.3 383.4 L 414.7 393.2 L 424.6 374.8 L 433.9 402.2 L 443.8 373.6 L 453.2 393.1 L 463.0 380.7 L 472.4 400.0 L 482.3 395.4 L 492.2 408.5 L 501.5 388.4 L 511.4 397.4 L 520.7 416.5 L 530.6 401.3 L 540.0 398.0 L 549.9 400.1 L 559.2 385.5 L 569.1 393.9 L 579.0 396.3 L 588.3 381.9 L 598.2 377.6 L 607.6 370.8 L 617.4 383.3 L 626.8 380.8 L 636.7 360.9 L 646.0 363.2 L 655.9 339.3 L 665.8 359.3 L 675.1 350.9 L 685.0 330.5 L 694.4 334.6 L 704.3 347.9 L 713.6 333.7 L 723.5 328.5 L 732.8 342.6 L 742.7 352.7 L 752.6 330.5 L 762.0 348.8 L 771.8 346.7 L 781.2 341.3 L 791.1 372.6 L 800.4 372.4 L 810.3 363.3 L 819.7 370.0 L 829.5 371.1 L 839.4 391.3 L 848.8 375.8 L 858.7 409.1 L 868.0 382.6 L 877.9 392.1 L 887.3 417.5 L 897.1 429.7 L 906.5 431.7 L 916.4 439.2 L 926.2 419.3 L 935.6 422.7 L 945.5 445.7 L 954.8 432.8 L 964.7 445.1 L 974.1 430.1 L 983.9 424.8 L 993.3 445.2 L 1003.2 439.1 L 1013.1 427.7 L 1022.4 442.7 L 1032.3 435.8 L 1041.7 415.1 L 1051.5 441.1 L 1060.9 432.0 L 1070.8 413.8 L 1080.1 419.3 L 1090.0 420.1" fill="none" stroke="#00A6ED" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="135" y1="638" x2="1090" y2="638" stroke="#515151" stroke-width="1"/>
+<text x="135" y="669" fill="#F6511D" font-family="Arial, sans-serif" font-size="14" font-weight="700">SYNTHETIC EXAMPLE ONLY — do not cite, publish as polling, or merge with Pollitik data.</text>
+<text x="135" y="695" fill="#515151" font-family="Arial, sans-serif" font-size="13">100 deterministic, computer-generated values; no pollster, respondents, fieldwork, or source.</text>
+</svg>
