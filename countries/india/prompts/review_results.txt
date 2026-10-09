@@ -1,0 +1,7 @@
+Show current India assignment results: APPROVED/REVIEW/REJECTED
+counts, and what the REVIEW cases need. Resolve the dataset via
+`python python/resolve_assignment_dataset.py --country India
+--purpose approved` and `--purpose review`, the same way every country
+resolves it - never guess which file answers the question. If no local
+or tracked results exist yet for India, say so plainly instead of
+fabricating a summary.

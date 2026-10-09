@@ -1,0 +1,98 @@
+# Pollitik Database — Source-Quality / Anti-Fraud Validation Rules
+#
+# PLACEHOLDER FILE — awaiting Dr. Evans' source-validation guidance.
+#
+# Purpose: this is the documented, future home for deterministic and
+# semi-deterministic rules for identifying fake, misleading, impersonated,
+# or otherwise unreliable websites, to be incorporated once Dr. Evans
+# supplies the actual guidance/checklist PDF.
+#
+# IMPORTANT — DO NOT INVENT CONTENT IN THIS FILE.
+#
+# Every section below is a structural placeholder only. Do not fill in
+# any list with rules, heuristics, keywords, or examples that were not
+# explicitly supplied by Dr. Evans' PDF (once provided) or by the user.
+# A research agent must never add a rule here based on inference,
+# plausibility, or general world knowledge of what "fake site detection"
+# usually involves — that is exactly the mistake this file exists to
+# prevent (see the pollitik-executive-support Skill's core rule: never
+# invent something because it seems plausible).
+#
+# How this file will be used once populated: the pollitik-executive-support
+# Skill's source-provenance rules (sections 5-8) currently check
+# retrievability (WebFetch succeeded) and domain approval
+# (config/allowed_domains.txt / config/domains/). This file will hold the
+# ADDITIONAL layer of judgment about whether an already-retrieved,
+# already-approved source is itself authentic/trustworthy - e.g.
+# distinguishing a pollster's real site from a copycat or impersonation
+# domain that a human might mistakenly approve. Until populated, none of
+# these categories are enforced; approval continues to rest solely on the
+# existing domain-allowlist + retrieval-verification mechanism.
+#
+# Categories requested by the project owner (Dr. Evans' forthcoming PDF
+# is expected to cover material in these areas — headings only, no rule
+# content yet):
+
+# --------------------------------------------------------------------
+# 1. Source authenticity
+#    General checks for whether a retrieved page is what it claims to be.
+# --------------------------------------------------------------------
+source_authenticity_rules: []
+
+# --------------------------------------------------------------------
+# 2. Publisher identity
+#    Confirming who actually operates/publishes a given domain.
+# --------------------------------------------------------------------
+publisher_identity_rules: []
+
+# --------------------------------------------------------------------
+# 3. Fake or copied websites
+#    Identifying sites that clone or closely imitate a real source.
+# --------------------------------------------------------------------
+fake_or_copied_website_rules: []
+
+# --------------------------------------------------------------------
+# 4. Misleading domains
+#    Domain-name patterns designed to look like a different, real source.
+# --------------------------------------------------------------------
+misleading_domain_rules: []
+
+# --------------------------------------------------------------------
+# 5. Impersonation sites
+#    Sites impersonating a specific pollster, institution, or publisher.
+# --------------------------------------------------------------------
+impersonation_site_rules: []
+
+# --------------------------------------------------------------------
+# 6. Suspicious URL patterns
+#    URL-structure heuristics (not domain-identity, see #4) worth flagging.
+# --------------------------------------------------------------------
+suspicious_url_pattern_rules: []
+
+# --------------------------------------------------------------------
+# 7. Source credibility
+#    Broader credibility signals beyond bare authenticity.
+# --------------------------------------------------------------------
+source_credibility_rules: []
+
+# --------------------------------------------------------------------
+# 8. Original vs. secondary source
+#    Rules for distinguishing/preferring an original source over
+#    secondary reporting, beyond the general preference already
+#    documented in Skill section 7.
+# --------------------------------------------------------------------
+original_vs_secondary_source_rules: []
+
+# --------------------------------------------------------------------
+# 9. Methodology transparency
+#    Signals that a source does/does not disclose real survey methodology.
+# --------------------------------------------------------------------
+methodology_transparency_rules: []
+
+# --------------------------------------------------------------------
+# Metadata (fill in once the PDF is actually incorporated - leave null
+# until then; do not guess a date or version).
+# --------------------------------------------------------------------
+source_pdf_received: null
+source_pdf_incorporated_at: null
+incorporated_by: null

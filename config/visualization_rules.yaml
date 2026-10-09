@@ -1,0 +1,148 @@
+# Pollitik Visualization Rules — machine-readable spec
+#
+# Companion to docs/visualization_rules.md (read that file for the
+# explanations; this file is the small, Codex/Python-consumable version
+# of the same confirmed rules).
+#
+# Provenance: these values were provided directly by the project owner
+# in conversation, not retrieved from the web and not sourced from any
+# other file in this repository. Do not add, remove, or reinterpret
+# values here from general design knowledge or inference — treat this
+# file as fixed until the project owner updates it.
+#
+# Consumers of this file must only ever read APPROVED records as input
+# (see data_quality.excluded_statuses below) — never REVIEW/REJECTED.
+#
+# 2026-08-21 workflow change: this file previously drove a single
+# forced automatic selection (see git history for the old
+# `selection_rule` block). It now drives a RANKED RECOMMENDATION list -
+# Codex ranks up to `recommendation.max_recommendations` eligible graph
+# types and the student picks one; nothing is auto-generated without
+# that choice. Eligibility thresholds below (`graph_types.*.requires`)
+# are unchanged in meaning, just consumed differently: as an eligibility
+# test per graph type instead of a single first-match branch.
+
+graph_types:
+  approval_over_time:
+    requires:
+      executives: 1
+      min_observations: 8
+      min_distinct_dates: 2
+    design:
+      mark: points
+      group_by: Series
+      connect_within_series: false
+      trend_line:
+        # Defined 2026-08-21 for python/generate_visualization.py's first
+        # implementation: a documented, deterministic, non-ML method (no
+        # LOESS/fitted model), so it satisfies this block's own
+        # "only enable when explicitly defined" condition.
+        #
+        # 2026-08-21 (later same day): added max_gap_days so the line is
+        # never drawn - never interpolated - across a long silence in the
+        # polling data. Everything else in this block (window_days,
+        # centered, pooled_across_series) is unchanged from the first
+        # implementation; only gap-breaking and visual weight (see
+        # generate_visualization.py's TREND_LINE_STROKE_WIDTH/OPACITY)
+        # were revised.
+        enabled: true
+        method: rolling_average
+        window_days: 30
+        centered: true
+        pooled_across_series: true
+        min_points_required: 8
+        max_gap_days: 45
+        note: "Centered rolling mean of Approval over a window_days-wide date window, pooled across all Series (not per-series). Computed once per unique Date present in the APPROVED data. The line breaks (no interpolation) wherever the gap between two consecutive trend-supporting dates exceeds max_gap_days."
+    applies_to: [time_series, single_leader]
+
+  leader_comparison_grid:
+    requires:
+      executives_min: 2
+      comparable_time_series: true
+    design:
+      layout: small_multiples
+      panel_by: executive
+    applies_to: [time_series, multiple_leaders, comparison]
+
+  snapshot_comparison:
+    requires:
+      # "a fair comparison" needs at least 2 things to compare.
+      min_series: 2
+    design:
+      mark: [bar, dot]
+      selected_date: latest
+    applies_to: [comparison, magnitude]
+
+  series_spread:
+    role: secondary_diagnostic_only
+    primary_use_prohibited_when: "assignment asks for change over time"
+    requires:
+      min_series: 2
+    design:
+      mark: [box, strip]
+      group_by: Series
+    applies_to: [distribution, pollster_comparison]
+
+recommendation:
+  # Ranking used to pick the top `max_recommendations` ELIGIBLE graph
+  # types (see graph_types.*.requires above for eligibility). Evaluated
+  # against APPROVED records only - REVIEW/REJECTED rows are filtered
+  # out before this runs and therefore never affect the ranking.
+  priority_order:
+    - leader_comparison_grid
+    - approval_over_time
+    - series_spread
+    - snapshot_comparison
+  max_recommendations: 3
+  reasons:
+    leader_comparison_grid: "Best for comparing approval trends across multiple leaders side by side."
+    approval_over_time: "Best for showing how {executive} approval changes over time."
+    series_spread: "Useful for showing differences across polling firms."
+    snapshot_comparison: "Useful for comparing pollsters at a selected/latest point, when the data supports a fair comparison."
+  student_workflow:
+    - "Codex reads the assignment and the APPROVED data only."
+    - "Codex ranks the top eligible graph types (up to max_recommendations) and presents them as a numbered, human-readable list (display name + one-line reason each) - never the internal graph_type id."
+    - "The student replies with an option number, the graph's display name, an unambiguous natural description, or 'all three' - resolved deterministically, never guessed."
+    - "Codex generates the resolved graph(s) automatically with full Pollitik styling - the student never sets axes, colors, legends, or formatting by hand, and never needs the internal graph_type id."
+
+style:
+  brand_colors:
+    amber: "#FFB400"
+    blue: "#00A6ED"
+    orange_red: "#F6511D"
+    off_white: "#FBFBF2"
+  color_priority: "use brand_colors before introducing any other color"
+  rules:
+    title: required_descriptive
+    dates: readable_native_format
+    values: percentage
+    plot_background: "#FBFBF2 (where appropriate)"
+    legend_position: below
+    provenance: required
+    cross_country_consistency: required
+
+data_quality:
+  excluded_statuses: [REVIEW, REJECTED]
+  never_invent: [prime_minister, party, date, value, source]
+  missing_field_policy: leave_blank
+  excluded_before_recommendation: true
+
+current_assignment:
+  canada_pm:
+    approved_observations: 29
+    executives: 1
+    executive_name: "Mark Carney"
+    series_count: 5
+    date_range: ["2025-09-12", "2026-08-08"]
+    frequency: irregular
+    recommended_ranking:
+      - rank: 1
+        graph_type: approval_over_time
+        recommended: true
+      - rank: 2
+        graph_type: series_spread
+      - rank: 3
+        graph_type: snapshot_comparison
+    excluded_from_ranking:
+      - graph_type: leader_comparison_grid
+        reason: "only 1 executive present (needs >= 2)"
