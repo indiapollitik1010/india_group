@@ -1,0 +1,11 @@
+Date,Approval,Prime Minister,Party,Series,Source,Status,Validation Reason
+,63,Mark Carney,Liberal,LIAISON,https://press.liaisonstrategies.ca/federal-tracker-liberals-lead-tories-by-12-2/,REVIEW,"Flagged for human review: ['SAMPLE_SIZE_INFERRED_FROM_PATTERN', 'FIELDWORK_DATE_UNKNOWN']"
+1/26/2026,59,Mark Carney,Liberal,LEGER,https://leger360.com/in-the-news-politics-canada-liberal-support-at-47-after-carneys-davos-china-trip/,REVIEW,"Flagged for human review: ['ARITHMETIC_REVIEW_REQUIRED', 'SERIES_REVIEW_REQUIRED']"
+3/7/2026,64,Mark Carney,Liberal,LIAISON,https://press.liaisonstrategies.ca/federal-tracker-liberals-lead-by-14/,REVIEW,Flagged for human review: ['SAMPLE_SIZE_INFERRED_FROM_PATTERN']
+3/14/2026,63,Mark Carney,Liberal,LIAISON,https://press.liaisonstrategies.ca/federal-tracker-liberals-maintain-14-point-national-lead/,REVIEW,Flagged for human review: ['SAMPLE_SIZE_INFERRED_FROM_PATTERN']
+3/30/2026,58,Mark Carney,Liberal,LEGER,https://leger360.com/in-the-news-canada-politics-carney-approval-stays-strong-ndp-faces-reset-avi-lewis-win-leger-march-2026/,REVIEW,Flagged for human review: ['ARITHMETIC_REVIEW_REQUIRED']
+4/4/2026,61,Mark Carney,Liberal,LIAISON,https://press.liaisonstrategies.ca/federal-tracker-liberals-maintain-double-digit-lead/,REVIEW,Flagged for human review: ['SAMPLE_SIZE_INFERRED_FROM_PATTERN']
+4/11/2026,60,Mark Carney,Liberal,LIAISON,https://press.liaisonstrategies.ca/federal-tracker-liberals-hold-10-point-lead/,REVIEW,Flagged for human review: ['SAMPLE_SIZE_INFERRED_FROM_PATTERN']
+4/18/2026,62,Mark Carney,Liberal,LIAISON,https://press.liaisonstrategies.ca/federal-tracker-carney-liberals-stretch-lead-to-12-points/,REVIEW,Flagged for human review: ['SAMPLE_SIZE_INFERRED_FROM_PATTERN']
+5/14/2026,62,Mark Carney,Liberal,SparkInsights,https://bruce728.substack.com/p/carney-government-approval-at-67,REVIEW,Flagged for human review: ['QUESTION_WORDING_UNKNOWN']
+8/3/2026,55,Mark Carney,Liberal,LEGER,https://leger360.com/in-the-news-federal-polling-august-2026/,REVIEW,"Flagged for human review: ['QUESTION_WORDING_UNKNOWN', 'SERIES_REVIEW_REQUIRED']"

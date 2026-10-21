@@ -1,0 +1,150 @@
+# Pollitik Database — Canonical Schema / Field Mapping
+#
+# This file documents the canonical semantic field names for a Pollitik
+# observation, how they map to the internal candidate-record field names
+# used throughout python/*.py and the agent pipeline (Skill section 30),
+# and (narrowly) which historical/alternate column spellings the
+# production writer should treat as the SAME field rather than a new one.
+#
+# IMPORTANT:
+# - This file does NOT rename, create, or remove any actual workbook
+#   column. python/apply_changes.py only ever writes to a column that
+#   already exists in the real workbook's header row (see that script's
+#   docstring, rule 5) - it never invents columns. This file only widens
+#   which existing-column *names* it is willing to recognize as a given
+#   semantic field.
+# - The real Pollitik/EAD workbook remains canonical. If the workbook
+#   uses different exact header names than shown here, that is expected
+#   and handled by `aliases` below - do not "fix" the workbook to match
+#   this file.
+# - Do not add a new alias to any field here without the actual
+#   historical name it is meant to cover (documented per Skill's
+#   "never invent" principle - the one alias below, Total Count ->
+#   Sample_Size, was explicitly named in the project's own instructions;
+#   do not extrapolate additional aliases for other fields from general
+#   guessing).
+
+# ---------------------------------------------------------------------
+# Canonical semantic fields -> internal candidate-record field name.
+#
+# "internal_field" is the name used inside candidate JSON records that
+# flow through multilingual-extractor -> matcher -> validate_record.py ->
+# stage_changes.py -> apply_changes.py (see Skill section 30 for the
+# full structured-candidate field list; several internal fields below,
+# e.g. question_wording_original/_status, exist alongside the single
+# canonical semantic field for richer provenance and are preserved
+# as-is, not collapsed into it).
+# ---------------------------------------------------------------------
+fields:
+  Country:
+    internal_field: country
+    required: true
+  Executive:
+    internal_field: executive_name
+    required: false
+    notes: >
+      The individual officeholder's name, when captured. Distinguish
+      from Executive_Type (the office). See Skill section 25 (government
+      vs. individual executive).
+  Executive_Type:
+    internal_field: executive_type
+    required: false
+    notes: "President / Prime Minister / Chancellor / etc. (Skill section 1)."
+  Series:
+    internal_field: series
+    required: true
+  Pollster:
+    internal_field: pollster
+    required: false
+    notes: >
+      Primarily used to identify, differentiate, and match Series (Skill
+      sections 10-11, 23). Not itself a substantive measure of executive
+      support. Missing pollster does not reject an otherwise valid,
+      sourced observation - it routes to REVIEW with
+      SERIES_REVIEW_REQUIRED when series continuity cannot otherwise be
+      established (python/validate_record.py: check_pollster).
+  Question_Wording:
+    internal_field: question_wording_english
+    required: false
+    notes: >
+      English interpretation of the question. question_wording_original
+      (verbatim/original language) and question_wording_status
+      (EXACT_WORDING/PARTIAL_WORDING/IMPLIED_WORDING/UNKNOWN_WORDING) are
+      preserved as separate supporting internal fields, not merged away
+      (Skill sections 9-10, 37).
+  Positive:
+    internal_field: positive
+    required: false
+    notes: "The primary reported support measure when applicable (Skill section 14)."
+  Negative:
+    internal_field: negative
+    required: false
+    notes: >
+      Optional/supporting field (project instruction, 2026-08). Collect
+      whenever available; missing Negative never by itself rejects an
+      otherwise valid observation. Preserve as null with a status such as
+      NEGATIVE_NOT_REPORTED when the source explicitly does not report a
+      negative component (as opposed to extraction simply not having
+      attempted it).
+  Neutral:
+    internal_field: neutral
+    required: false
+    notes: "Optional. Absent when the response scale has no neutral option, or not reported (Skill sections 15-16)."
+  Fieldwork_Date:
+    internal_field: fieldwork_date_normalized
+    required: conditional
+    notes: >
+      Required where available/derivable under the existing Skill rules
+      (sections 19-21). Missing/unknown fieldwork date does not reject by
+      itself - it flags FIELDWORK_DATE_UNKNOWN and routes to REVIEW,
+      consistent with this project's general REVIEW-over-REJECTED
+      posture when in doubt.
+  Sample_Size:
+    internal_field: sample_size
+    required: false
+    aliases: ["Total Count", "Total_Count", "TotalCount"]
+    notes: >
+      Optional/supporting field (project instruction, 2026-08). The SAME
+      semantic field historically referred to in some schema/
+      documentation as "Total Count" - never create both Total_Count and
+      Sample_Size as separate production columns. When missing, preserve
+      null with a status such as SAMPLE_SIZE_NOT_FOUND when the source
+      explicitly does not report it. A narrow, always-REVIEW exception
+      for inferring from an established firm/series pattern exists (Skill
+      section 45) - never a substitute for confirming the actual figure.
+  Source:
+    internal_field: source_url
+    required: true
+    notes: "Must originate from actual retrieval metadata only (Skill sections 5-6, 31)."
+  Source_Language:
+    internal_field: source_language
+    required: false
+  Notes:
+    internal_field: notes
+    required: false
+    notes: >
+      Free-text field preserving useful methodological/contextual
+      information that doesn't fit another column (e.g. caveats about
+      wording confidence, sample composition, or known discrepancies).
+
+# ---------------------------------------------------------------------
+# Required/optional classification (Skill section on validator field
+# requiredness; see also python/validate_record.py check_required_identity
+# and check_pollster):
+#
+#   core_required_fields    -> missing means REJECTED (validate_record.py
+#                               hard-requires these; nothing else does)
+#   core_conditional_fields -> important, but missing routes to REVIEW,
+#                               never an automatic REJECTED
+#   optional_supporting_fields -> collect when available; missing alone
+#                               never rejects and never forces REVIEW
+# ---------------------------------------------------------------------
+core_required_fields: [Country, Series, Source]
+core_conditional_fields: [Fieldwork_Date, Positive]
+optional_supporting_fields: [Negative, Neutral, Sample_Size, Pollster, Notes]
+
+# If a documented EAD-manual rule is ever found to impose a stricter
+# requirement than this classification (e.g. making a field in
+# optional_supporting_fields actually mandatory for a specific series
+# type), that conflict must be reported and resolved explicitly rather
+# than silently overridden by this file - see Skill's validator section.

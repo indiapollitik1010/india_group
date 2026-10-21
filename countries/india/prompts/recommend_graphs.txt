@@ -1,0 +1,8 @@
+Recommend graphs for the current India APPROVED results. Resolve
+the current APPROVED dataset via `python
+python/resolve_assignment_dataset.py --country India --purpose
+approved`, rank the top eligible graph types from
+`config/visualization_rules.yaml`, and present them as a numbered,
+human-readable list (never an internal graph type id). Generate nothing
+yet. If no APPROVED India data exists yet, say so plainly instead
+of recommending against empty or fabricated data.

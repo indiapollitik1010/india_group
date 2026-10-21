@@ -1,0 +1,45 @@
+# Local/dev-oriented compose file. See docs/REMOTE_DEPLOYMENT.md before
+# using this as a template for a real remote deployment (it documents
+# what a multi-worker / hardened deployment additionally needs).
+#
+# No --privileged, no docker.sock mount, no host directories beyond this
+# repository's own build context are ever referenced. Persistent Pollitik
+# data lives in named volumes, not host bind-mounts, so a host misconfig
+# cannot accidentally expose ~/.ssh, Downloads, or unrelated repositories
+# to the container.
+
+services:
+  pollitik-manager:
+    build: .
+    image: pollitik-manager:local
+    ports:
+      - "8000:8000"
+    environment:
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY:-}
+      - CLAUDE_CODE_OAUTH_TOKEN=${CLAUDE_CODE_OAUTH_TOKEN:-}
+      - POLLITIK_API_TOKEN=${POLLITIK_API_TOKEN:?Set POLLITIK_API_TOKEN in your environment or .env - see .env.example}
+    env_file:
+      # Optional. This file is gitignored - never commit a real one. See
+      # .env.example for the variable names this service reads.
+      - path: .env
+        required: false
+    volumes:
+      - pollitik-data-master:/app/data/master
+      - pollitik-data-staging:/app/data/staging
+      - pollitik-data-archive:/app/data/archive
+      - pollitik-data-cache:/app/data/cache
+      - pollitik-feedback:/app/feedback
+      - pollitik-logs:/app/logs
+      - pollitik-outputs:/app/outputs
+      - pollitik-jobs:/app/service_data/jobs
+    restart: unless-stopped
+
+volumes:
+  pollitik-data-master:
+  pollitik-data-staging:
+  pollitik-data-archive:
+  pollitik-data-cache:
+  pollitik-feedback:
+  pollitik-logs:
+  pollitik-outputs:
+  pollitik-jobs:

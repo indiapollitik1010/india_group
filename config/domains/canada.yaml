@@ -1,0 +1,33 @@
+# Canada-specific approved-domain metadata. See config/domains/README.md
+# for how this relates to the actual enforcement file,
+# config/allowed_domains.txt, and config/domains/_TEMPLATE.yaml for the
+# schema this file follows.
+#
+# IMPORTANT — DO NOT INVENT CONTENT IN THIS FILE. Populate only after
+# the project owner has explicitly approved a domain (same rule as
+# config/allowed_domains.txt).
+
+country: "Canada"
+
+domains:
+  - host: "angusreid.org"
+    country: "Canada"
+    pollster_or_program: "Angus Reid Institute"
+    source_type: "polling_firm"
+    approval_status: "approved"
+    active: true
+    notes: >
+      Approved by the project owner on 2026-08-14, from the domain
+      review ledger. Explicitly named in docs/ead/EAD MANUAL.txt's
+      Canada line. Matches existing Canada PM-approval series in
+      .claude/skills/pollitik-executive-support/references/canada.md.
+  - host: "leger360.com"
+    country: "Canada"
+    pollster_or_program: "Léger"
+    source_type: "polling_firm"
+    approval_status: "approved"
+    active: true
+    notes: >
+      Approved by the project owner on 2026-08-14, from the domain
+      review ledger. Explicitly named in docs/ead/EAD MANUAL.txt's
+      Canada line.

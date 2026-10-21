@@ -1,0 +1,83 @@
+# Pollitik Database — Approved Source Domains
+#
+# This file is the authoritative allow-list enforced by
+# .claude/hooks/pollitik_guard.py for WebFetch (and any other approved
+# deterministic retrieval mechanism) calls made during Pollitik research.
+#
+# RULES FOR THIS FILE:
+#
+# 1. One domain per line. No protocol, no path, no wildcard characters.
+#    Example of correct format:
+#        example-pollster.com
+#
+# 2. Matching is host-based: a request is allowed if its resolved host
+#    is exactly one of these entries, or a subdomain of one of these
+#    entries (e.g. "example-pollster.com" also allows
+#    "polls.example-pollster.com").
+#
+# 3. Lines starting with "#" are comments and are ignored.
+#    Blank lines are ignored.
+#
+# 4. DO NOT add a domain to this file merely because it seems like a
+#    plausible or well-known pollster, or because it appears in
+#    config/candidate_domains.txt. Per the pollitik-executive-support
+#    Skill, domains must be explicitly approved by the project owner
+#    (the user), one at a time or as an explicit batch, before research
+#    agents may fetch from them.
+#
+# 5. No actual pollster, media, or institutional domains have been
+#    approved yet. This list intentionally starts empty of real entries.
+#    Add domains here only after the user explicitly approves them.
+#
+#    History: on 2026-08-13, a merged branch (PR #1) added 381 domains
+#    directly to this file under a bulk "every domain the master
+#    workbook has ever cited as a Source" rule - a materially weaker and
+#    differently-scoped standard than "the project owner explicitly
+#    approves this domain." Those domains were moved to
+#    config/candidate_domains.txt (discovery-tier, NOT enforced) rather
+#    than deleted, and this file was restored to empty pending real
+#    per-domain approval. See that file's header for the full history.
+#
+# 6. Do not use this file to whitelist URL shorteners, link redirectors,
+#    generic cache/proxy/mirror services, or CDN wildcards as a way to
+#    reach otherwise-unapproved hosts. Each real source domain must be
+#    listed explicitly.
+#
+# --------------------------------------------------------------------
+# EXAMPLE ENTRIES (commented out — uncomment or replace with domains
+# the user actually approves; these are illustrative placeholders only,
+# not a claim that they are approved):
+#
+# example-national-pollster.example
+# example-statistics-institute.example
+# --------------------------------------------------------------------
+#
+# Approved domains (add below this line, one per line):
+#
+# Approved 2026-08-14 by the project owner, from the domain review
+# ledger (config/candidate_domains.txt review): Ipsos (global pollster,
+# named across many countries in docs/ead/EAD MANUAL.txt), Léger and
+# Angus Reid Institute (both explicitly named in the EAD manual's Canada
+# line). See config/domains/global.yaml and config/domains/canada.yaml
+# for the per-domain rationale.
+angusreid.org
+ipsos.com
+leger360.com
+morningconsult.com
+indiatoday.in
+gallup.com
+pewresearch.org
+#
+# --------------------------------------------------------------------
+# The following 4 domains were explicitly approved by the user on
+# 2026-08-25, scoped to verifying the Australian Prime Minister
+# officeholder-timeline provenance in
+# .claude/skills/pollitik-executive-support/references/australia.md
+# (NOT for polling-observation research) - official Australian
+# government/parliamentary sources, chosen so Wikipedia/WebFetch
+# provenance for executive-officeholder dates can be replaced with
+# authoritative government provenance:
+aph.gov.au
+gg.gov.au
+naa.gov.au
+pm.gov.au

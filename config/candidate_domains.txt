@@ -1,0 +1,441 @@
+# Pollitik Database — Candidate/Discovery-Tier Domains (NOT enforced)
+#
+# THIS FILE IS NOT READ BY .claude/hooks/pollitik_guard.py OR
+# python/pollitik_common.read_allowed_domains(). Nothing here grants
+# WebFetch access. It exists so a large batch of discovered domains can
+# be preserved and reviewed without being treated as approved merely by
+# being present — the mistake this file exists to prevent (see the
+# provenance note below).
+#
+# RELATIONSHIP TO config/allowed_domains.txt:
+#   config/allowed_domains.txt  = the ONLY enforced allow-list.
+#   config/candidate_domains.txt (this file) = discovery-tier only. A
+#     domain here has NOT been explicitly approved by the project owner
+#     and must not be WebFetched. `python/check_domain.py` only checks
+#     config/allowed_domains.txt - being listed here does not make
+#     `check_domain.py` report APPROVED.
+#
+# PROMOTION: moving a specific domain from this file to
+# config/allowed_domains.txt requires the project owner's explicit,
+# per-domain (or explicit-batch) approval - the same standard
+# config/allowed_domains.txt's own rule 4/5 has always required. Do not
+# promote a domain from this list without that approval, regardless of
+# how it was originally derived.
+#
+# --------------------------------------------------------------------
+# PROVENANCE / WHY THIS FILE EXISTS
+#
+# On 2026-08-13, PR #1 (sushmitha/canada-pm-assignment1) added the 381
+# domains below directly into config/allowed_domains.txt - the
+# enforcement file - under a comment describing "Professor Ryan's
+# Assignment 1 rule": every unique valid domain associated with a
+# Master-sheet data point dated 2024-01-01 or later in
+# data/master/pollitik_master.xlsx, derived by deterministic bulk
+# extraction (not per-domain review).
+#
+# That made all 381 domains live, WebFetch-approved sources - globally,
+# for every country's research, not just Canada's - even though:
+#   - the large majority are not Canada-related at all (the whole
+#     workbook spans many countries, so its Source column does too);
+#   - bulk "every domain the workbook has ever cited" is a materially
+#     weaker/different standard than config/allowed_domains.txt's own
+#     documented rule ("explicitly approved by the project owner ... one
+#     at a time or as an explicit batch") - a classroom assignment rule
+#     is not the project owner approving a specific source;
+#   - none of the 381 were individually vetted for authenticity,
+#     continued legitimacy, or relevance to any specific research task.
+#
+# Per the project owner's instruction, this data is preserved (not
+# deleted) but moved here, out of the enforcement path, and reclassified
+# as discovery/candidate-tier pending real per-domain review. No domain
+# below should be treated as academically approved merely because it
+# appears in this list.
+#
+# PROMOTED: on 2026-08-14 the project owner explicitly approved
+# angusreid.org, ipsos.com, and leger360.com (following the domain
+# review ledger). They were moved out of this file into
+# config/allowed_domains.txt and into config/domains/canada.yaml /
+# config/domains/global.yaml respectively - see those files. All other
+# entries below remain candidate-only; presence here is still not
+# approval.
+#
+# 378 domains, alphabetized, unmodified from the original derivation
+# (381 minus the 3 promoted above).
+1news.co.nz
+20.detik.com
+836f83d8-9b42-49a6-9099-7b3c280794b2.usrfiles.com
+abacusdata.ca
+acento.com.do
+alpharesearch.bg
+ambito.com
+americanresearchgroup.com
+anda.cl
+apnorc.org
+arabbarometer.org
+archive.ph
+archive.today
+aresco.com
+argentinaelections.com
+ariasconsultores.com
+as-coa.org
+asahi.com
+asia-pacific-solidarity.net
+asia.nikkei.com
+atlasintel.org
+awrad.org
+bahiaeconomica.com.br
+belize.com
+biobiochile.cl
+biz.chosun.com
+blogdomagno.com.br
+bloomberg.com
+bloomberglinea.com
+brasil247.com
+breakingnews.ie
+bruce728.substack.com
+buendiaymarquez.org
+bva-xsight.com
+cadem.cl
+canal4.com.ni
+canalmeio.com.br
+capital.de
+cartacapital.com.br
+caucasusbarometer.org
+cba24n.com.ar
+cbconsultoraop.com
+cbglobaldata.com
+cbsnews.com
+cdn.atlasintel.org
+cedatos.com
+cenital.com
+cepchile.cl
+changeresearch.com
+chile.activasite.com
+chosun.com
+ciep.ucr.ac.cr
+cifra.com.uy
+cifrasyconceptos.com
+cis.es
+citopinion.pe
+civiqs.com
+clarin.com
+clickresearch.ec
+climadeopinion.blogspot.com
+cnbc.com
+cnegovco.sharepoint.com
+cnn.com
+cnnbrasil.com.br
+cnt.org.br
+colegioabogados.cl
+colombiaone.com
+compolitica.com
+correodelsur.com
+covidstates.org
+cpi.pe
+cpr.cuhk.edu.hk
+criteria.cl
+cronista.com
+cultmtl.com
+cygn.al
+d3nkl3psvxxpe9.cloudfront.net
+dalessio.com.ar
+datafolha.folha.uol.com.br
+datum.com.pe
+de.statista.com
+delfoscba.com.ar
+demoscopiadigital.com
+demotecnia.com.mx
+diarioextra.com
+diariolibre.com
+disruptiva.media
+dnevnik.hr
+docs.google.com
+doi.org
+dr.dk
+drive.google.com
+economist.com
+ekospolitics.com
+el19digital.com
+elabe.fr
+elancasti.com.ar
+elcomercio.pe
+eldiario.es
+eldinamo.cl
+eleconomista.com.ar
+eleconomista.com.mx
+electografica.com
+elespanol.com
+elfinanciero.com.mx
+elintransigente.com
+elmundo.cr
+elnacional.com
+elnorte.ec
+elobservador.com.uy
+elpais.com.co
+eltelegrafo.com.ec
+eluniversal.com.mx
+emersoncollegepolling.com
+en.infomaxai.com
+en.tempo.co
+en.wikipedia.org
+en.yna.co.kr
+english.hani.co.kr
+english.kyodonews.net
+enkoll.com
+enorsai.com.ar
+equipos.com.uy
+es-us.noticias.yahoo.com
+es.scribd.com
+es.wikipedia.org
+ess.sikt.no
+estudiosdeopinion.iep.org.pe
+eva.fi
+exame.com
+expreso.ec
+facebook.com
+faupolling.com
+feedbackresearch.cl
+filesforprogress.org
+flchamber.com
+floridaphoenix.com
+floridapolitics.com
+flvoicenews.com
+fom.ru
+foxnews.com
+fundaungo.org.sv
+g1.globo.com
+g5noticias.cl
+gerp.com.br
+ghanabattlegroundpolls.com
+giacobbeconsultores.com
+globalinfoanalytics.com
+google.com
+graphic.com.gh
+harris-interactive.fr
+harrisx.com
+harvardharrispoll.com
+heraldodemexico.com.mx
+hgr1993.com
+hs.fi
+ibifukraine.com
+icdn.today
+iclnoticias.com.br
+icpcolombia.org
+iep.org.pe
+ifop.com
+iiacss.org
+images.udesa.edu.ar
+indiatoday.in
+indonesiabusinesspost.com
+infobae.com
+infocielo.com
+infomoney.com.br
+informes.diagnosisestudios.com
+infratest-dimap.de
+insideradvantage.com
+instagram.com
+interactivos.eluniversal.com.mx
+ipp.md
+iprofesional.com
+iri.org
+irishtimes.com
+issuesinsights.com
+istoe.com.br
+jakartaglobe.id
+jamaica-gleaner.com
+japan-forward.com
+japannews.yomiuri.co.jp
+japantimes.co.jp
+jen.jiji.com
+johnzogbystrategies.com
+jota.info
+kan.org.il
+kiis.com.ua
+kisi.kz
+koreaherald.com
+koreajoongangdaily.joins.com
+koreatimes.co.kr
+kristeligt-dagblad.dk
+laderechadiario.com
+laestrella.com.pa
+lagaceta.com.ar
+lajornadaestadodemexico.com
+lanacion.com.ar
+lanacion.com.py
+lapoliticaonline.com
+laprensa.com.ar
+laprensagrafica.com
+laregion.cr
+larepublica.net
+lasillavacia.com
+latercera.com
+latinobarometro.org
+law.marquette.edu
+lefigaro.fr
+letrap.com.ar
+levada.ru
+ljz.mx
+lmneuquen.com
+lookerstudio.google.com
+loquepasa.net
+lordashcroftpolls.com
+lp.genialinvestimentos.com.br
+lu17.com
+lv12.com.ar
+m24.com.uy
+mainichi.jp
+mako.co.il
+malukresearch.com
+manilatimes.net
+maristpoll.marist.edu
+maskina.is
+massivecaller.com
+mb.com.ph
+mdzol.com
+media-blog.genialinvestimentos.com.br
+media-front.elmostrador.cl
+mega975.com.ar
+miamitimesonline.com
+mitofsky.mx
+mk.co.kr
+morichile.cl
+morningconsult.com
+myrconsultores.com
+napolitannews.org
+nasional.kompas.com
+nationwideradiojm.com
+navigatorresearch.org
+nbsurvey.kr
+ndi.org
+nesdc.go.kr
+news.detik.com
+news.gallup.com
+news.web.nhk
+newsweek.com
+nhk.or.jp
+nippon.com
+noi-polls.com
+nomadeconsultora.uy
+noticias.perfil.com
+noticias.r7.com
+noticias.uol.com.br
+noticiascaracol.com
+ntv.co.jp
+nytimes.com
+nzherald.co.nz
+odoxa.fr
+oe24.at
+oglobo.globo.com
+opcion.com.uy
+opinion.com.bo
+opinium.com
+oraculus.mx
+pagina12.com.ar
+panamaamerica.com.pa
+paneltuinfluyes.com
+paradigma.hn
+parametria.com.mx
+paranapesquisas.com.br
+pcpsr.org
+penoticias.com.br
+perfil.com
+perfilesdeopinion.com
+pewresearch.org
+pna.gov.ph
+poder360.com.br
+podresearch.hk
+policynews.jp
+poll.qu.edu
+pollbludger.net
+pollingdata.com.br
+pollitik.slack.com
+portal.factum.uy
+presidencia.gov.co
+press.liaisonstrategies.ca
+primeraplana.com.ec
+primicias.ec
+pro.morningconsult.com
+projects.fivethirtyeight.com
+publico.es
+publicusasia.com
+pulseasia.ph
+quaest.com.br
+quantusinsights.org
+radiolaprimerisima.s3.amazonaws.com
+radiopichincha.com
+rasmussenreports.com
+ratinggroup.ua
+razumkov.org.ua
+rctrend.bg
+realclearpolitics.com
+realclearpolling.com
+realmeter.net
+reforma.com
+researchco.ca
+reuters.com
+revista32.mx
+revistaforum.com.br
+revonews.ai
+ric.com.br
+rtvcnoticias.com
+sanjoseahora.com.uy
+scribd.com
+search.gesis.org
+semana.com
+sinembargo.mx
+sites.google.com
+sondaggipoliticoelettorali.it
+static.cepchile.cl
+static.foxnews.com
+static.poder360.com.br
+static1.squarespace.com
+statista.com
+stetson.edu
+storage.ghost.io
+stuff.co.nz
+suffolk.edu
+sws.org.ph
+t13.cl
+tallahassee.com
+taxpayers.org.nz
+techoversight.org
+teledoce.com
+thediplomat.com
+thetrafalgargroup.org
+tippinsights.com
+today.yougov.com
+tolunacorporate.com
+tpof.org
+tresearch.mx
+tuinfluyes.com
+twitter.com
+uca.edu.sv
+unfporl.org
+unique-research.at
+urgente24.com
+usercontent.one
+usnews.com
+valoraanalitik.com
+view.officeapps.live.com
+vilmorus.lt
+visualcapitalist.com
+voxmeter.dk
+wciom.com
+web.archive.org
+web.razonmx.com
+wfla.com
+wnp.pl
+world.kbs.co.kr
+wradio.com.co
+wrnumero.com
+www1.folha.uol.com.br
+www3.nhk.or.jp
+x.com
+yahoo.com
+ygo-assets-websites-editorial-emea.yougov.net
+yle.fi
+yomiuri.co.jp
+yougov.co.uk
+youtube.com
+zdf.de
+zubancordoba.com

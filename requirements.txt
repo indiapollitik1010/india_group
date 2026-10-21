@@ -1,0 +1,20 @@
+openpyxl>=3.1
+pandas>=2.0
+PyYAML>=6.0
+
+# python/build_reference_index.py, python/reference_lookup.py - low-token
+# reference retrieval index derived from the master workbook. Excel
+# remains canonical; this is a rebuildable, read-only index only.
+duckdb>=0.10
+
+# service/ - remote Pollitik Manager service
+# Requires Python >= 3.10 (claude-agent-sdk's own requirement).
+claude-agent-sdk>=0.2.100
+fastapi>=0.115
+uvicorn[standard]>=0.30
+pydantic>=2.7
+
+# tests/
+pytest>=7.0
+pytest-asyncio>=0.23
+httpx>=0.27

@@ -1,0 +1,81 @@
+# Secrets - never commit real environment values.
+.env
+.env.*
+!.env.example
+
+# Local-only Claude Code permission overrides (analogous to .env - see
+# .claude/settings.json for the shared, safe-to-commit project hook
+# registration; settings.local.json is personal/local by convention).
+.claude/settings.local.json
+
+# Generic credential file patterns (belt-and-suspenders on top of the
+# manual pre-commit secret scan - see docs/REMOTE_DEPLOYMENT.md).
+*.pem
+*.key
+*.p12
+*.pfx
+*.ppk
+id_rsa*
+id_ed25519*
+id_ecdsa*
+id_dsa*
+*.token
+.aws/
+.gcloud/
+.azure/
+credentials.json
+service-account*.json
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+.venv_service/
+venv/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Service runtime state (MVP job store - see service/job_store.py)
+service_data/
+
+# Excel lock files (created while a workbook is open in Excel/LibreOffice)
+~$*.xlsx
+~$*.xlsm
+~$*.xls
+
+# Pollitik data - real polling data, derived indexes/caches, and backups
+# should not be committed to a public/shared history by accident. If
+# this project later moves to a git remote, review this section with the
+# project owner before loosening it - some of these directories may need
+# to be tracked (e.g. data/master/) depending on the chosen persistence
+# strategy. Do NOT commit real production data unless explicitly
+# authorized.
+data/master/*
+!data/master/.gitkeep
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+data/staging/*
+!data/staging/.gitkeep
+data/archive/*
+!data/archive/.gitkeep
+data/cache/*
+!data/cache/.gitkeep
+data/reference_index.duckdb
+
+logs/**/*.jsonl
+feedback/*
+!feedback/.gitkeep
+evals/results/*
+!evals/results/.gitkeep
+outputs/figures/*
+!outputs/figures/.gitkeep
+outputs/reports/*
+!outputs/reports/.gitkeep
+
+# OS
+.DS_Store

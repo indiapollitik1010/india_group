@@ -1,0 +1,8 @@
+Run the Canada Prime Minister approval assignment using the repo workflow.
+First run `python python/check_python_dependencies.py`.
+- If it reports dependencies_ready=false, STOP before preflight and before any research or staging. This is an environment/setup problem, not a data problem. Tell the student to run `pip install -r requirements.txt` once, from the repo root, then retry - do not attempt to install packages yourself, and do not record any NOT_FOUND/REVIEW/REJECTED observation because of it.
+- Only once it reports dependencies_ready=true, continue: run `python python/check_assignment_preflight.py --country Canada`.
+- If it reports SAFE_TO_RESEARCH=true, continue directly.
+- If it reports reference_data_status=COUNTRY_SNAPSHOT_BUILDABLE, build the local reference index from the tracked snapshot using the exact command in its `suggested_index_build_command` field (equivalent to `python python/build_reference_index.py --workbook countries/canada/data/canada_reference_snapshot.csv --index data/reference_index.duckdb`), then re-run the preflight check. Do not start research until that re-run reports SAFE_TO_RESEARCH=true.
+- If it still reports SAFE_TO_RESEARCH=false for any other reason, stop and report the reason instead of researching or staging anything.
+Only once SAFE_TO_RESEARCH=true, inspect the existing assignment/reference state and continue with research on approved domains. Do this automatically - never ask the student to type the build command themselves.

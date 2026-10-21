@@ -1,0 +1,389 @@
+ EXECUTIVE APPROVAL DATABASE (EAD) DATA COLLECTION MANUv.10/8/2020
+ 
+WHAT IS THE NATURE OF THE EAD PROJECT?
+To gather aggregate time series of executive approval/disapproval as many of the world’s political systems as possible for as long a period as possible, and to use these multiple series to estimate single approval and disapproval series that best reflects public support for executives.
+
+ 
+WHAT ARE THE DATA COLLECTION PRIORITIES?
+1.	To update existing series for countries already in the EAD.
+2.      	To add new series for countries already in the EAD.
+3.      	To extend existing series backwards in time for countries already in the EAD.
+4.      	To add series for countries not yet in the EAD.
+5.	To add missing data points to existing series for countries already in the EAD. 
+
+ 
+WHERE ARE THE DATA & SERIES INFORMATION LOCATED?
+An EAD folder on Google Drive contains two spreadsheets and a folder. Spreadsheet “EAD Data Collection Master” contains the data; “EAD Series and Question Wording” contains the rest of the relevant series information. Folder “Country files” has a repository folder for each country which contains an “Institutional Knowledge” document and a variety of other files (.pdf, .xlsx, .doc, .pptx, etc) use for documentation. The most recent version of the dataset can be visualized at this unpublished site: http://www.executiveapprovaldata.org/EAD_collection/ Note: it differs from the normal http://www.executiveapprovaldata.org/ in that the latter is “frozen” to reflect EAD 2.0.
+ Exective Approval
+EAD DATA COLLECTION MASTER SPREADSHEET
+The main spreadsheet for data entry is EAD Data Collection Master. For each approval/disapproval datum (row), enter as many of the following pieces of information as possible. Letters correspond to spreadsheet columns. 
+
+A   	Data Source: the name of the series of which the datum is a part. A key first task 
+is to determine whether the datum is part of an existing series. To do so, reference the “EAD Series and Question Wording” file (see description below). If it is a new series, i.e., not an existing series, then you will need to create a new series in both EAD Data Collection Master and EAD Series and Question Wording (see instructions below).
+
+B   	Date: Format must always be mm/dd/yyyy, e.g. 3/18/2018, 10/6/2017, or 11/23/2016. 
+It should correspond to the final date of the survey fieldwork. If you cannot 
+confirm the fieldwork dates, please use the 15th of the month as an approximation. That is a reasonable solution and does little damage to the time series analysis. However, firms tend to work in patterns. So if you review the rest of the series you may notice that a survey firm tends to survey in roughly the same time frame of each month/quarter.  If so, simply make the date correspond to this time period. In all cases, energetically seek to verify the actual dates; call the firm if you must.
+
+C   	Total Count: Sample size. If you cannot confirm sample size, leave it blank. Some 
+firms have a standard sample size (e.g., 1000, 1200), for omnibus surveys, e.g. These can be used instead if the firm’s historical pattern is strong.
+
+D   	Positive: The percentage of positive responses based on the approval item. [see 
+Table 1 below]
+
+E   	Neutral: The percentage of neutral responses based on the approval item. [see 
+Table 1 below]
+
+F         Neg: The percentage of negative responses based on the approval item. [see Table 
+1 below]
+ 
+Table 1. Guide to entering data based on questions of varying response categories
+ 
+Number of Response Categories in the Survey Item
+ 
+2
+3
+4
+5
+Positive
+% “approve”, “good”, “well”, “positive” etc.
+% “approve”, “good”, “well”, etc.
+% [“very good” + “good”], [“very well” + “well”], “approve,” “positive,” etc.
+% [“very good” + “good”], [“very well” + “well”], “approve,” “positive,” etc.
+Neutral
+N/A
+% “regular”, “neither”, etc.
+N/A
+% “regular”, “neither”, etc.
+Neg
+% “disapprove,” “bad”, “poorly”,
+“negative,” etc.
+% “disapprove”, “good”, “well”, etc.
+% [“bad” + “very bad”], [“very well” + “well”], “disapprove,” “negative,” etc.
+% [“bad” + “very bad”], [“very well” + “well”], “disapprove,” “negative,” etc.
+ 
+G  	Net: = (% Positive − % Negative); construct with mathematical functions
+o   Leave blank if either % Positive or % Negative is missing
+Equation for Collection Master: =d:d-f:f (you have to put a = too)
+
+H   	App/App+Dis: = [% Positive/(% Positive + % Negative)*100]; construct with 
+mathematical functions
+o   Leave blank if either % Positive or % Negative is missing
+Equation for Collection Master: =d:d/(d:d+f:f)*100
+
+I         	Source: Where did you find the data point/s? Insert a link, document name, 
+person/contributor
+o   Documents should be uploaded to the country’s repository in the “Country 
+Files” folder
+o   Contributors should be acknowledged on website; contact Ryan Carlin to add a 
+name
+
+J        Country: Fill in each new row with the appropriate country name. Note: most “dual executive”/semi-presidential systems and some parliamentary systems will have multiple series. For example, France_Gov, France_Pres, and France_PM. Be sure to use the exact spelling and capitalization conventions in both EAD Data Collection Master and the “EAD Series and Question Wording” spreadsheet, to which we now turn.
+ 
+EAD SERIES AND QUESTION WORDING SPREADSHEET
+This spreadsheet catalogs and names the data series. It works in concert with EAD Data Collection Master to create the data visualizations on our website. 
+
+Reference this sheet to determine how to classify new data points. If you encounter a new series and/or country, you will need to add a new row to this spreadsheet. Any alterations must the Letters correspond to spreadsheet columns.
+
+A   	Country: Reflects the label of the country-series, and must correspond exactly 
+with the label in Data Source (i.e., column A) in EAD Data Collection Master. 
+
+B   	Series: Each series has its own distinct name. Firms that have published multiple 
+series are usually distinguished by question wording and/or the number of response choices they include.
+
+C   	Description: Combines information on firm, question wording, and/or sample
+
+D   	Question Type: a typology based on question wording; can be useful for 
+classifying based on news reports, journalist accounts, etc. Do not feel obligated 
+to record this.
+
+E   	Question Wording: the actual question wording used, to the best of our 
+knowledge. Confirming this information, especially in the vernacular, for each series would be useful.
+
+F	Method: list the method of interview used and any other info about the sample 
+that you can glean
+
+
+INSTITUTIONAL KNOWLEDGE
+As noted above, “Country files” contain specific folders and an “Institutional Knowledge” document for each country. And In order to capture the maximum amount of knowledge about your data series, local industry, and search strategies, please take notes in this document. It will remind you from year to year how you were able to find certain data points or series, and if you leave the EAP it will help others as they seek to collect data on your case.
+
+WHERE SHOULD I SEARCH FOR EXECUTIVE APPROVAL DATA?
+There are several places data on executive approval can be found.
+
+·        	Survey Firms. If you can contact a firm and meet in person with them, they may be 
+willing to share past reports that include data on executive approval. If they have to compile it they will usually charge a fee. Discuss all meetings with Ryan Carlin ahead of time.
+
+·    	Survey Firms’ Websites. Many firms keep records of, or at the very least, post the 
+latest news releases which often contain data on executive approval. Look for reports, graphics, and tables. You may be able—in some rare cases—to establish a free login.
+
+·        	Previous Sources. Examine links next to previous entries. If they are newspapers, 
+search the archives for the pollster’s name, the executive’s name, or both.
+
+·  	Google. Google and its affiliates in each country (e.g. for Mexico, 
+www.google.com.mx).
+
+·  	Google Images. Searching in this way allow you to visually inspect a great deal of 
+sources very quickly. Remember: if you find a graphic that you can use, please 
+save it directly to the country’s folder in “Country Files” and use the name of the file as the “Source” (column I of EAD Data Collection Master).
+
+·      	Google Scholar. If a scholarly paper analyzes executive, it will often contains 
+graphs, tables, or in-text mentions of approval ratings. Also, the author may have 
+the data linked on his/her website. If not, please let me know and I can guide you in contacting the author directly to ask for the data.
+
+·        	National and International Repositories. Many countries have national statistics 
+offices that curate public opinion data. Germany’s GESIS is an example, and may contain data on other European countries. ICPSR is another example. CESSDA coordinates such resources for 16 countries; a longer list is here. Perhaps the most comprehensive list of such sources is from Princeton here. Often this will require working with raw data; contact Ryan Carlin for guidance.
+
+·        	University Library. The Roper Center and the Gallup World Poll are excellent 
+resources, and libraries will need to pay subscription fees (as for October 2020, GSU has lost its Roper Center subscription and does not subscribe to the Gallup World Poll). Often this will require working with raw data; contact Ryan Carlin for guidance. Other universities may maintain public opinion archives, e.g., CIDE Mexico (BIIACS), U. de la República (Uruguay), Odum Institute (UNC-Chapel Hill).
+
+·        	Regional and International Survey Projects. Usually free reports and/or online 
+tools are available for calculating survey marginals for the AmericasBarometer, various regional partners in the Global Barometers Surveys (e.g. Latinobarómetro, Asian Barometer, Afro Barometer, Eurasian Barometer); the Comparative Study of Electoral Systems; etc.
+
+·        	Newsletters: There are a small handful of newsletters that compile comparative 
+reports on executive approval with some degree of consistency. Consider the 
+example of Mitofsky’s tri-annual “MANDATARIO” report. The data come from various firms. Be sure to check the index in the back. All survey firms as well as the month surveyed should be listed. Seek to confirm actual dates on pollsters’ websites and Google. Note, these reports have some new countries that we should consider adding.
+
+·        Political Parties: Parties in many countries run their own polls. Often they will not 
+share such data but it never hurts to ask. Additionally, the National Democratic 
+Institute and the International Republican Institute also conduct polls in a number of developing countries; their websites are searchable.
+
+·        	Other Databases: Some other groups may collect executive data, e.g., ACOP. Do 
+your best to cross-validate such data via Google searches, pollster websites, etc. 
+
+·        	If you identify a firm/source that you suspect has executive approval series but 
+you cannot find many published data points for it, please establish a spreadsheet for the firm in your Country File and include key details for follow up (e.g. name, website, coverage, etc. on the spreadsheet. If the data are not free, please note the price so that we can seek funding for it at a later date.
+ 
+HOW SHOULD I SEARCH FOR EXECUTIVE APPROVAL DATA?
+Searching the internet for executive approval requires creativity. Below are some basic tips, and you may develop your own strategies. In order to record as many data points as possible, it will require exhaustive search for each series. 
+
+·        	Search “[EXECUTIVE’S LAST NAME]” and then “approval ratings”, “popularity”, 
+and related terms in English and in local language/s.
+
+·        	Include the pollster and specific verbiage they use in their question 
+stems/response choices (see “EAD Series and Question Wording” spreadsheet).
+
+·      	Add “pdf”, “ppt”, “pptx”, “xls”, and “xlsx” to the search terms in order to find 
+monthly reports, newsletters, datasets, and presentations. Search Google Images.
+
+·        	Usually firms conduct surveys at regular intervals (monthly, quarterly, annually). If 
+you notice a missing data point from this pattern, use information related to it to locate the missing datum. Firms may also be willing to give you one or a small number of data points if you contact them directly. And this may lead to a longer relationship with the firm.
+ 
+FAQ’S
+WHAT HAPPENS IF I FIND A % APPROVE DATA POINT BUT I CANNOT FIND SOME OR MOST OF THE OTHER INFORMATION (E.G. % DISAPPROVE, N, % DON'T KNOWS/NO RESPONSES)?
+In this common situation, do not guess; provide as much information as you can. If you are searching within the same source at a later time point, this information could be provided, so watch for it.
+ 
+WHAT KINDS OF QUESTIONS QUALIFY FOR OUR THE EAD?
+Chiefly, we are interested in questions about "approval" of the executive's job performance. Other common questions include “image”, “sympathy”, “opinion”, etc. We do not generally accept “trust” in the executive; exceptions may be made in some parliamentary cases (please consult Ryan Carlin).
+
+Opinion polls, especially in parliamentary and semi-presidential systems, will often ask the "Sunday question":  "If the election were next this coming Sunday, which party would you vote for?" Since this question measures a potential behavior instead of an actual attitude towards the executive, we will never combine it with approval-style questions. Please consult Ryan Carlin before collecting such data. If you agree that you should record these series, please be sure to name them using “SUN” as the first 3 letters of the name, e.g., “SUNGALLUP” or “SUNIPSOS,” in order to avoid any confusion. Please use multiple columns to record marginals for as many options (parties, usually) as are available.
+
+Another type of question that usually does not interest us asks respondents to “grade” the executive on a continuous scale, e.g. 1-7, 1-10, 1-100. These are common in parliamentary systems, as well as Spain and some Latin American countries. However if the question combines a continuous response scales with an approval-disapproval prompt and the scale has clear approval-disapproval anchors, please record the distribution as you would any other question--in consultation with Ryan Carlin.
+ 
+WHAT SHOULD I DO IF I FIND A QUESTION THAT IS NOT REPRESENTED IN ANY EXISTING SERIES?
+That would be wonderful! In all cases, be sure you are entering data that matches the question asked, response choices, and series on the spreadsheet. But if you find executive approval data based on a question that is not included in “EAD Series and Question Wording,” we will need to create a new series. Please inform Ryan Carlin before doing this.
+ 
+WHAT SHOULD I DO WITH DATA FROM DATA SOURCES/SET WHICH COLLECT DATA USING DIFFERENT FIRMS? E.G., CSES, WORLD BAROMETER, ETC.?
+Consider two examples that illustrate how to deal with this. In the case of Latinobarometro, the spreadsheets are labeled "LB." If multiple firms have carried it out, I typically name the firm LB+the firms' name, to denote it was part of the Latinobarometro. Please follow this convention, if even the name of the firm changes. For the sake of 
+compilation, we will treat them each as part of the LB. In the cases of the ESS and CSES, previous data collectors have not done this. Please backtrack and recreate the series names according to the convention described above.
+ 
+
+MISCELLANEOUS NOTES
+
+WISH LIST
+It would be great to contact each firm to:
+1.      explain the project
+2.      ask them for complete approval time series
+3.      ask them for missing information on N and 95CI
+4.      ask them to consider putting you on their mailing lists for their newsletter
+5.      be sure to note that this is completely academic, not for profit
+6.    and, if they won’t give us the data, as a last resort, ask how much it would cost to purchase them
+ 
+As a second best, it would be great to establish contact with someone in Mitofsky, Angus Reid, IPSOS, Mori, TNS, Gallup, or another large polling firm who gets a stream of reports from other researchers. Perhaps they would be willing to allow us to cull through them. Presumably such a source exists in each country.
+ 
+Africa data appears to be in the hands of a firm called Steadman. We will need big money to get it. Whether or not it is worthwhile I do not know. We would need more information on the quality, temporal and spatial coverage, and periodicity of the surveys. Rumor has it that they are difficult to work with.
+ 
+In addition, we need someone to go through the following sources to code approval aggregates:
+1.      World Values Survey/European Social Survey
+2.      Afrobarometer
+3.      Arab Barometer
+4.      East Asian Barometer
+5.      Eurasian Barometer
+6.      Eurobarometer
+7.      Central and Eastern/New Democracies Barometer
+8.      CIDE’s BIIACS archives
+9.      The Roper Center Cornell
+10.   Odum Institute UNC
+11.   CSES
+12.   Gallup world poll
+13.   National Democratic Institute
+14.   International Republican Institute
+15.   CESSDA
+Note that for some of these series there exist “trend” or pooled files which scholars or data archives have compiled and which will facilitate data collection efforts. For example, the Mannheim Eurobarometer Trend File pools a set of common data from the Eurobarometer survey series. 
+ 
+ 
+Data Archives; Potential Data Sets; Partially Obtained Data Sets
+*UPDATED 2012
+Argentina
+U. San Andrés; Carlos Fara y Asoc., Management & Fit; Ipsos-Mora y Araujo, Römer, Gallup, Catterberg, Somerc, Equis, Ricardo Rovier y Asoc., CEOP, Poliarquía, OPSM
+Australia
+ASSDA; Galaxy; Roy Morgan, Newspoll, AC Nielsen
+Austria
+Wisdom GESIS-ZA; OGM
+Bangladesh
+Ctr. for Sustainable Development
+Belgium
+iVox, La Libre Belgique, ULB
+Bolivia
+U. San Francisco Asís; Ipsos-Apoyo Opinión y Mercado Equipos MORI
+Botswana
+U. Botswana
+Brazil
+CESOP; CNN; Gallup, Datafolha, IBOPE, Inst. Sensus
+Bulgaria
+Alpha Research NCPO, IM&SS, Mediana, Risk Analysis, Barometar; SSDA, Trend
+Canada
+TriUniversity Data Resource;  Mustel, Strategic Counsel, Zogby; Environics, Angus Reid, Ipsos, SES-SunMedia, Léger
+Chile
+FLACSO; Gémines, Hamuy; CEP, CERC, Fundación Futuro, Adimark, La Tercera, U. Diego Portales, El Mercurio-Opina, Ipsos-MORI
+Colombia
+Revista Cambio; Gallup, Napoleón Franco
+Costa Rica
+U. Nacional, Borge y Asoc., ByS Consultores; CID-Gallup, Demoscopia, Unimer-RI, U. de Costa Rica
+Croatia
+Gallup, Metron, Puls, GfK, Médium
+Cyprus (Greek)
+Politis, Cymar, Phileleftheros
+Czech Rep
+SDA; Median, Empirica, Factum Invenio; CVVM/IVVM, STEM
+Denmark
+DDA; Gallup, Catinét Research, Megafon
+Dominican Rep
+Noxa-Cies, PS&B, Omnimedia, Zogby; CID-Gallup
+Ecuador
+Market, Gallup; CEDATOS, Informe Confidencial
+El Salvador
+LPG Datos, Rivera; CID-Gallup, Borge y Asoc., Inst. Univ. de Op. Pub., Jabes, U. Central America, Mitofsky
+Estonia
+ESSDA; TNS Emor
+Finland
+FSD; Suomen Gallup, Taloustutkimus
+France
+Réseau Quetelet, TNS Sofres, LH2, CSA, BVA, Louis-Harris, IFOP, IFOP-FIDUCIAL, Ipsos, Odoxa, Elabe
+Georgia
+CRRC, GIPO; Rezonansi, Gallup
+Germany
+GESIS-ZA; Infratest-Dimap, Forsa, FG Wahlen; IFD-Allensbach
+Ghana
+CDD-Ghana; Gallup
+Greece
+GSDB; Kapa, Metron, Mrb VPRC, Opinion
+Guatemala
+TSE, Predatos; CID-Gallup, VoxLatina, Sigma2
+Haiti
+CID-Gallup, Bendixen & Assoc.
+Honduras
+AP; CID-Gallup, Borge y Asoc.
+Hungary
+Tarki; Tarki, Szonda Ipsos, Gallup, Median
+Iceland
+Frettabladid, Gallup
+India
+Lokniti, Cfore, Org-Marg, GfK, CSDS
+Indonesia
+LSI, IFES, LKaDe
+Ireland
+ISSDA; Red C, Ipsos MORI; MRBI, Lansdowne, IMS
+Israel
+ISDC; Dahaf Inst., Yediot Ahronot, Dialog, Maariv, M.Mochot
+Italy
+ADPS-Sociodata; SWG, Arnaldo Ferrari Nasi; IPR, ISPO, Ipsos-Public Affairs, Unicab Italia
+Jamaica
+Bill Johnson, Stone, MRS
+Japan
+Nikkei, Asahi, Yomiuri, Mainichi, Kyodo News
+Kenya
+IDS U. Nairobi; Strategic, Steadman, Daily Nation
+Latvia
+SKDS,InMind, FASS
+Lithuania
+Vilmorus, Baltijos Tyrimai, Baltic
+Macedonia
+Inst. for Democracy
+Madagascar
+INSTAT
+Mali           	
+GREAT-Mali
+Mexico
+CIDE-BIIACS; Off. of the Pres. Pub. Op. Research, Indemerc, Sigma2, Reforma, El Universal, Ipsos-Bimsa, Parametria, BGC, GEA-ISA, Mitofsky
+Moldova
+IMAS, IPP, CSI, MS, OPINA
+Montenegro
+Cedem
+Mozambique
+ISPU
+Namibia
+IPPR
+Netherlands
+DANS; Maurice de Hond, TNS-Nipo, Gallup
+New Zealand
+Digipoll, Colmar Brunton, TNS, AC Nielsen, Roy Morgan, UMR, TVNZ
+Nicaragua
+Sigma2; CID-Gallup, M&R, Borge y Asoc.
+Norway
+NSD; Norstat, Norsk Respons, TNS and Norsk Gallup, NRK, Sentio, Opinion
+Panama
+CID-Gallup, PSM-Sigma2, Dichter & Neira
+Paraguay
+Coure, M&R, ICA, Atti Snead; First, Coin, GEO, MORI, Sigma2
+Peru
+Imasen Peru21, Apoyo, U. de Lima, U. Católica, CPI, Datum Intl., Idice
+Philippines
+Pulse Asia, Social Weather Stations, Ibon
+Poland
+ADS; CBOS. GfK, TNS OBOP, PBS GDA, SMG/KRC, PGB
+Portugal
+Euroexpansão, Marktest, Eurosondagem
+Romania
+Roda; IMAS, IPP, CURS, Ctr. for Urban & Reg. Soc., CSOP, Insomar, CSAI
+Russia
+Levada, VCIOM, ARPORC, Pub. Op. Foundation., RCPOMR; RSDA, DBSR
+Serbia
+CESID, SM&MRI, Partner, CPRPO, Faktor Plus, Marten Board Int., Gallup
+Slovak Rep.
+SASD, SAV; UVVM, Focus, MVK, OMV
+Slovenia
+ADP; Ninamedia, Delo, RTV
+South Africa
+TNS, Research Surveys, Markinor, ACNielsen
+South Korea
+Gallup ,RealMeter, Media Research, Korea Research Ctr., TNS, East Asia Inst., Korea Times, Research & Research, JoonAng Ilbo, Korea Soc. Op. Inst.
+Spain
+ARCES; CIS, Ipsos, Inst. Opina, Gallup, Sigma2
+Sri Lanka
+Ctr. for Policy Alternatives
+Sweden
+SSD; Demoskop, Sifo, Skop, Synovate, Temo, Ruab
+Switzerland
+SIDOS
+Taiwan
+Sinica; United Daily News, TVBS, China Times, Shih Hsin U., RDEC
+Thailand
+KPI, ABAC, Suan Dusit U., Bangkok U., Assumption U.
+Trinidad and Tobago
+Selwyn Ryan & Assoc., UWI/ANSA MCAL Psychological Research Ctr., NACTA, NTA-Primus Group
+Turkey
+A&G, Sonar, Anar, Aksam, VERSO, GENAR, Konda, ANDY-AR
+Ukraine
+SSSC, Pub.Op.Fdn. DIF, FOM, KGIMI, TNS, CSPI, KISI, Razumkov Ctr., Interfax, UISR; USA, KIIS
+United Kingdom
+UKDA; Gallup, MORI, YouGovt, ICM
+United States
+Roper, ICPSR, Odum; All available
+Uruguay
+Cifra, Interconsult, MORI, Factum, Grupo Radar
+Venezuela
+Datos-IR,RCTV,CECAS; Consultores 21, Datanálisis, IVAD, Keller, Hinterlaces
+Zambia
+Pangolin,U. Zambia, Steadman Research Services
+ 
+

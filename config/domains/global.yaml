@@ -1,0 +1,25 @@
+# Domains not tied to one specific country - e.g. a multi-country survey
+# program's own site (Eurobarometer, Latinobarometro, Gallup World Poll,
+# etc. - see Skill section 47) or a comparative-newsletter source that
+# compiles executive-approval numbers across many countries.
+#
+# See config/domains/README.md for how this relates to the actual
+# enforcement file, config/allowed_domains.txt.
+#
+# IMPORTANT — DO NOT INVENT CONTENT IN THIS FILE. Same rule as
+# config/allowed_domains.txt: populate only after the project owner has
+# explicitly approved a domain.
+
+domains:
+  - host: "ipsos.com"
+    country: null
+    pollster_or_program: "Ipsos"
+    source_type: "polling_firm"
+    approval_status: "approved"
+    active: true
+    notes: >
+      Approved by the project owner on 2026-08-14, from the domain
+      review ledger. Global polling firm named across many countries in
+      docs/ead/EAD MANUAL.txt (Argentina, Bolivia, Chile, Colombia,
+      France, Hungary, Ireland, Mexico, Spain, etc.) - not tied to one
+      country, hence global.yaml rather than a per-country file.

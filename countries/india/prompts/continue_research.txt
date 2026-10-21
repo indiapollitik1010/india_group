@@ -1,0 +1,6 @@
+Continue the next India source batch: resume research at the
+next unresolved batch instead of restarting from scratch. Run the same
+dependency check and preflight steps as
+countries/india/prompts/run_assignment.txt first; stop if any SETUP
+REQUIRED item in countries/india/AGENTS.md is still unresolved, or
+if SAFE_TO_RESEARCH is false.

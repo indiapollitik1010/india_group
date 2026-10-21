@@ -1,0 +1,22 @@
+# Template for a per-country domain-metadata file. Copy this to
+# <country>.yaml (e.g. canada.yaml) only once the project owner has
+# actually approved at least one domain for that country - never commit
+# a real country file with invented/placeholder entries.
+#
+# The leading underscore keeps this file from ever being mistaken for a
+# real country's data. See config/domains/README.md.
+
+country: "Example Country"   # must match the workbook's Country value
+
+domains: []
+# Example of a populated entry, for reference only (keep commented out
+# in this template):
+#
+# domains:
+#   - host: "example-pollster.example"
+#     country: "Example Country"
+#     pollster_or_program: "Example Pollster"
+#     source_type: "polling_firm"
+#     approval_status: "approved"
+#     active: true
+#     notes: "Approved by the project owner on YYYY-MM-DD; see config/allowed_domains.txt."

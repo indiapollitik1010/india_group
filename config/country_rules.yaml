@@ -1,0 +1,117 @@
+# Pollitik Database — Country / Executive Coding Rules
+#
+# This file documents project-level exceptions and mappings referenced by
+# the pollitik-executive-support Skill (see .claude/skills/pollitik-executive-support/SKILL.md,
+# sections 2, 12, and 13).
+#
+# IMPORTANT — DO NOT INVENT CONTENT IN THIS FILE.
+#
+# Every list below must remain empty (or contain only illustrative,
+# clearly-commented examples) until the user or the canonical Pollitik
+# workbook explicitly establishes a real entry. A research agent must
+# never add a country, suffix, title mapping, or exception to this file
+# based on inference, plausibility, or general world knowledge.
+#
+# When the Skill instructs an agent to "consult country-specific rules,"
+# it means: read this file as it currently exists. If the relevant
+# entry is not present, treat the exception as NOT GRANTED and fall back
+# to the Skill's default (generally-eligible) rules.
+
+# --------------------------------------------------------------------
+# 1. Countries where "trust" in the executive is an eligible series
+#    (Skill section 2: trust/confidence are excluded by default).
+#
+#    Format (illustrative only — do not uncomment without explicit
+#    project authorization):
+#
+#    trust_allowed:
+#      - country: "Example Country"
+#        notes: "Explain why trust is treated as a general-support series here."
+# --------------------------------------------------------------------
+trust_allowed: []
+
+# --------------------------------------------------------------------
+# 2. Countries where "confidence" in the executive is an eligible series.
+#    Same format and same rule as trust_allowed above.
+# --------------------------------------------------------------------
+confidence_allowed: []
+
+# --------------------------------------------------------------------
+# 3. Country field suffix mappings (Skill section 12).
+#
+#    The Skill describes illustrative suffix patterns such as
+#    Country_PM, Country_GOV, Country_Pres. These are EXAMPLES ONLY.
+#    The authoritative convention for any given country must come from
+#    the existing Pollitik workbook, not from this file or from model
+#    inference. Record a mapping here only after confirming it against
+#    the workbook.
+#
+#    Format:
+#
+#    country_suffix_mappings:
+#      - country_base: "Example Country"
+#        system_type: "parliamentary" # presidential | parliamentary | dual-executive
+#        suffixes:
+#          - field: "Country_PM"
+#            meaning: "Prime Minister series"
+#          - field: "Country_GOV"
+#            meaning: "Government-as-a-whole series"
+# --------------------------------------------------------------------
+country_suffix_mappings: []
+
+# --------------------------------------------------------------------
+# 4. Executive title mappings.
+#
+#    Local-language or locally-used executive titles that map to a
+#    known office/executive_type. Populate only from confirmed sources
+#    (the workbook, or explicit user instruction) — never from general
+#    world knowledge assumed on the fly.
+#
+#    Format:
+#
+#    executive_title_mappings:
+#      - country: "Example Country"
+#        local_title: "Example Local Title"
+#        english_equivalent: "Prime Minister"
+#        executive_type: "head_of_government" # head_of_government | head_of_state
+# --------------------------------------------------------------------
+executive_title_mappings: []
+
+# --------------------------------------------------------------------
+# 5. Special-series exceptions.
+#
+#    Any other documented, country-specific deviation from the default
+#    Skill rules (e.g. a series that is merged/split differently than
+#    the general rule in Skill section 10-11 for a specific country,
+#    by explicit prior human decision).
+#
+#    Format:
+#
+#    special_series_exceptions:
+#      - country: "Example Country"
+#        series: "Example Series Name"
+#        rule: "Describe the exact exception and cite the human decision/source."
+# --------------------------------------------------------------------
+special_series_exceptions: []
+
+# --------------------------------------------------------------------
+# 6. Multi-wave survey-program naming conventions (Skill section 47).
+#
+#    For a recurring program that fields through different firms across
+#    waves (e.g. Latinobarometro, Eurobarometer, CSES, WVS/ESS), records
+#    the program's abbreviation so series get named consistently as
+#    ABBREVIATION + FirmName (the Skill's own example: "LB" + firm name
+#    for Latinobarometro-fielded series, e.g. "LBGallup").
+#
+#    Do not invent a program abbreviation here from general knowledge -
+#    only record one once the existing workbook (or an explicit human
+#    decision) actually establishes it.
+#
+#    Format:
+#
+#    survey_program_naming_conventions:
+#      - program: "Example Barometer Program"
+#        abbreviation: "EXBP"
+#        notes: "Cite the workbook precedent or human decision that established this."
+# --------------------------------------------------------------------
+survey_program_naming_conventions: []

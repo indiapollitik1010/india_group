@@ -1,0 +1,55 @@
+# Pollitik Database — Future Source-System Registry
+#
+# This file is the documented configuration point for registering
+# additional DATABASES/SURVEY SYSTEMS the researcher agent may search in
+# the future (national polling archives, polling firms, academic survey
+# repositories, government survey systems, regional polling databases,
+# survey-program archives, etc.) - see the pollitik-executive-support
+# Skill's "Where to look" / researcher agent guidance.
+#
+# IMPORTANT — DO NOT INVENT CONTENT IN THIS FILE.
+#
+# This registry starts EMPTY. Do not add a real system here based on
+# plausibility or general knowledge of "well-known" polling
+# archives/firms - only add an entry once the project owner has
+# explicitly approved that specific system, the same standard applied to
+# config/allowed_domains.txt. A registry entry here is NOT itself a
+# domain approval: even an approved source system's domain(s) must still
+# separately appear in config/allowed_domains.txt (or the modular
+# config/domains/ structure) before the researcher may WebFetch them -
+# see that file and .claude/hooks/pollitik_guard.py, which is the actual
+# enforcement point. This file is a catalog/registry, not an allow-list.
+#
+# Relationship to config/domains/: a source system entry may reference
+# zero, one, or several approved domains once they exist. A source
+# system can be registered (as "known but not yet domain-approved")
+# before any of its domains are approved - that is the intended use for
+# the researcher's discovery step (Skill: "Discovery may identify
+# sources that are not yet approved").
+#
+# Per-system metadata schema (illustrative shape only - the list below
+# starts empty; populate one entry per approved system):
+#
+# source_systems:
+#   - name: "Example National Polling Archive"
+#     domain: "example-archive.example"            # primary domain, if known
+#     countries: ["Example Country"]                # ISO-style or workbook Country values
+#     language: "en"                                # primary content language(s)
+#     source_type: "national_polling_archive"       # see source_type vocabulary below
+#     pollster_or_program: null                      # specific firm/program if applicable
+#     requires_authentication: false
+#     active: true
+#     approval_status: "approved"                    # approved | pending | rejected
+#     notes: "Cite how/when the user approved this system."
+#
+# source_type vocabulary (documentation only, not enforced):
+#   - national_polling_archive
+#   - polling_firm
+#   - academic_survey_repository
+#   - government_survey_system
+#   - regional_polling_database
+#   - survey_program_archive
+#   - comparative_newsletter
+#
+# No actual source systems have been approved yet.
+source_systems: []

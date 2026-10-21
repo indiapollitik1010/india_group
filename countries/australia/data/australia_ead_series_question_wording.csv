@@ -1,0 +1,22 @@
+Country,Series,Description,Question Type,Question Wording,Method
+Australia ,ACNIELSEN,AC Nielsen Approval ,Approval ,Prime Minister Approval (approve or disapprove) ,
+Australia ,CSES,Comparative Study of Electoral Systems,Performance,"Now thinking about the performance of the [government in [CAPITAL]/president] in general, how good or bad a job do you think the [government/president in [CAPITAL]] has done over the past [NUMBER OF YEARS SINCE LAST GOVERNMENT TOOK OFFICE, BEFORE THE CURRENT ELECTION] years? Has [it/he/she] done a very good job? A good job? A bad job? A very bad job?",
+Australia ,ESSENTIALRESEARCH,Prime Minister Satisfaction ,Satisfaction ,"""Do you approve or disapprove of the way [name] is handling his/her job as Prime Minister?"" ",
+Australia ,FOX&HEDGEHOG,MIGUEL RESEARCH & ADD QUESTION WORDING,,,
+Australia ,FreshwaterStrategy,Freshwater Stategy,Satisfaction ,"""Below are a list of figures in Australian Politics and culture. For each say whether you have heard of them, and if so, whether you have a favourable, unfavourable, or neutral view of them?""",
+Australia ,GALLUPWORLD_LSHP,Gallup World Poll (leadership),Approval ,Do you approve or disapprove of the job performance of the leadership of this country?,
+Australia ,GALLUPWORLD_LDR,Gallup World Poll (leader),Approval ,Do you approve or disapprove of the way the leader/head/President of this country is handling his/her job as leader/head/President?,
+Australia ,IPSOS,Prime Minister Satisfaction ,Satisfaction ,Question of Satisfaction,
+Australia ,MORGAN,Prime Minister Approval ,Approval ,"""Do you approve or disapprove of the way [name] is handling his/her job as Prime Minister?"" ",
+Australia ,MorningConsult,Morning Consult Global Leader Approval Tracker,Approval ,,
+Australia ,NEWSPOLL,Prime Minister Satisfaction ,Satisfaction ,"""Are you satisfied or dissatisfied with the way [name] is doing his/her job as Prime Minister?""",
+Australia ,NEWSPOLL/YOUGOV,NEWSPOLL/YOUGOV,Satisfaction ,"""Thinking now about the leaders of the parties.  Are you satisfied or dissatisfied with 
+the way Anthony Albanese is doing his job as Prime Minister?""",
+Australia ,NEWSPOLL/PYXIS,NEWSPOLL/PYXIS,Satisfaction ,"""On balance, and while you may have no strong feelings either way, would you be more inclined to 
+say you have been satisfied or dissatisfied with the way Anthony Albanese is doing his job as Prime 
+Minister?""",
+Australia ,NIELSEN,"Formerly ACNEILSEN, measures approval ",Approval ,Question of Approval ,
+Australia ,Resolve Strategic,Resolve Strategic,Performance,How would you rate Scott Morrison’s performance as Prime Minister in recent weeks?,
+Australia ,YouGov,YouGov,Satisfaction ,"""Thinking now about the leaders of the major parties.  Are you 
+satisfied or dissatisfied with the way Anthony Albanese is doing 
+his job as Prime Minister?""",
