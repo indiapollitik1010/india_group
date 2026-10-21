@@ -1,0 +1,3 @@
+interface:
+  display_name: "Data Viz Posts"
+  short_description: "Write source-aware X and Substack data posts"
